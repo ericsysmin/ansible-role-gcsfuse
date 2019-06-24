@@ -1,4 +1,7 @@
 ---
+- name: gcsfuse | Ensure gpg is installed
+  apt: name=gnupg
+
 - name: gcsfuse | Add an apt signing key
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
