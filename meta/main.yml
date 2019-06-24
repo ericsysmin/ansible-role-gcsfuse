@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: gcsfuse
-  author: Eric Anderson
+  author: ericsymsin
   description: Role to install gcsfuse
   license: MIT
   min_ansible_version: 2.4
