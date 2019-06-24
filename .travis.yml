@@ -10,8 +10,10 @@ env:
   global:
     - ROLE_NAME: gcsfuse
   matrix:
-    - MOLECULE_DISTRO: centos:7
-
+    - MOLECULE_DISTRO: ubuntu:xenial
+    - MOLECULE_DISTRO: ubuntu:bionic
+    - MOLECULE_DISTRO: debian:jessie
+    - MOLECULE_DISTRO: debian:stretch
 install:
   - pip install testinfra molecule docker
 
@@ -21,7 +23,7 @@ before_script:
   - cd ericsysmin.$ROLE_NAME
 
 script:
-  - molecule lint
+  - molecule test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
