@@ -1,6 +1,6 @@
 # ericsysmin.gcsfuse
 
-[![Build Status](https://travis-ci.org/ericsysmin/ansible-role-gcsfuse.svg?branch=master)](https://travis-ci.org/ericsysmin/ansible-role-gcsfuse)
+[![Build Status](https://travis-ci.com/ericsysmin/ansible-role-gcsfuse.svg?branch=master)](https://travis-ci.com/ericsysmin/ansible-role-gcsfuse)
 
 This role installs the gcloud command-line tool on a linux system.
 
