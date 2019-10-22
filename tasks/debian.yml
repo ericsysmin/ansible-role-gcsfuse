@@ -1,6 +1,10 @@
 ---
 - name: gcsfuse | Ensure gpg is installed
   apt: name=gnupg
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
 
 - name: gcsfuse | Add an apt signing key
   apt_key:
@@ -14,6 +18,8 @@
     filename: gcsfuse
 
 - name: gcsfuse | Install gcsfuse
-  apt:
-    name: gcsfuse
-    update_cache: yes
+  apt: name=gcsfuse update_cache=yes
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
